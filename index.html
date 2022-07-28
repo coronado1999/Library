@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Library</title>
+    <link rel="stylesheet" href="style.css">
+    <script defer src="library.js"></script>
+</head>
+<body>
+    <h1>Library</h1>
+    <div class="btnCenter">
+        <button class="addBtn" data-book-target="#addBook">Add Book</button>
+    </div>
+    <div class="addBook" id="addBook">
+        <div class="header-form">
+        <legend>Add new book</legend>
+        <button data-close-button class="close-button">&times;</button>
+        </div>
+        <form id="form" onsubmit="return false">
+            <ul>
+                <li>
+                    <input type="text" id="title" name="title" placeholder="Title">
+                </li>
+
+                <li>
+                    <input type="text" id="author" name="author" placeholder="Author">
+                 </li>
+
+                <li>
+                     <input type="text" id="pages" name="pages" placeholder="Pages">
+                </li>
+             </ul>
+
+             <p>Have you read it yet? <input type="radio" id="yes" name="read" value="Yes">Yes
+                <input type="radio" id="no" name="read" value="No">No</p>
+            <div class="overlayBtn">
+            <button data-close-button class="close-button" id="removeBook" onclick="addBookToLibrary()">Add to library</button>
+            </div>
+        </form>
+    </div>
+    <div id="overlay"></div>
+
+    <table class="tableBook" id="myTable">
+        <th>Title</th>
+        <th>Author</th>
+        <th>Pages</th>
+        <th>Read yet?</th>
+        <th>Remove</th>
+    </table>
+</body>
+</html>
